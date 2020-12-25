@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage System</title>
+    <script src="js/BackgroundManagement.js"></script>
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/Common.js"></script>
+</head>
+
+<style>
+    #bigDiv{
+        width: 95vw;
+        height: 90vh;
+        box-shadow: 0 0 15px 5px #78C2AD;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #iframeDiv{
+        border-radius: 5px;
+        overflow: hidden;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $(".nav-link").click(function() {
+            $("#iframe").attr('src', $(this).attr('href'));
+        });
+
+        $("#welcomeMessage").text("Welcome " + getCookie("name") + "!");
+    })
+</script>
+
+<body class="vh-100 d-flex justify-content-center align-items-center m-0">
+<div id="bigDiv" class="position-relative d-flex pl-1 pr-2 py-3 rounded">
+    <div class="d-flex justify-content-center align-items-center flex-column p-0 mr-1 col-2">
+        <h5 class="lead text-secondary text-center mb-auto" id="welcomeMessage">Welcome</h5>
+
+        <div class="nav flex-column nav-pills nav-justified w-100" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link nav-item" id="exams" data-toggle="pill" href="ExamInfoGrid.html" role="tab" aria-controls="exams" aria-selected="false">Exams</a>
+            <a class="nav-link nav-item" id="versions" data-toggle="pill" href="ExamVersionGrid.html" role="tab" aria-controls="versions" aria-selected="false">Versions</a>
+            <a class="nav-link nav-item" id="schools" data-toggle="pill" href="SchoolInfoGrid.html" role="tab" aria-controls="schools" aria-selected="false">Schools</a>
+            <a class="nav-link nav-item" id="students" data-toggle="pill" href="StudentGrid.html" role="tab" aria-controls="students" aria-selected="false">Students</a>
+            <a class="nav-link nav-item" id="instructors" data-toggle="pill" href="InstructorGrid.html" role="tab" aria-controls="instructors" aria-selected="false">Instructors</a>
+            <a class="nav-link nav-item" id="admin" data-toggle="pill" href="AdminGrid.html" role="tab" aria-controls="admin" aria-selected="false">Admin</a>
+        </div>
+
+        <form action="/managementLogout" class="mt-auto">
+            <button type="submit" class="btn btn-secondary btn-sm text-center">Logout</button>
+        </form>
+    </div>
+
+    <div id="iframeDiv" class="col-10 embed-responsive">
+        <iframe src="ManagementWelcome.html" frameborder="0" class="embed-responsive-item" name="iframe" id="iframe"></iframe>
+    </div>
+</div>
+</body>
+</html>

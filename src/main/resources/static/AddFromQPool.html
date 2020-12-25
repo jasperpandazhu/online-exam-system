@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add from Question Pool</title>
+    <!--jsZIP-->
+    <script src="js/jszip.js"></script>
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <!--jqGrid-->
+    <script src="plugins/jqgrid/js/trirand/i18n/grid.locale-en.js"></script>
+    <!-- This is the Javascript file of jqGrid -->
+    <script src="plugins/jqgrid/js/trirand/src/jquery.jqGrid.js"></script>
+    <link rel="stylesheet" href="plugins/bootstrap-3.4.1/css/bootstrap3-theme-paper.css">
+    <script>
+        $.jgrid.defaults.styleUI = 'Bootstrap';
+    </script>
+    <!-- A link to a Boostrap and jqGrid Bootstrap CSS files-->
+    <link rel="stylesheet" type="text/css" media="screen" href="plugins/jqgrid/css/trirand/ui.jqgrid-bootstrap.css" />
+    <script src="plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/AddFromQPool.js"></script>
+</head>
+
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    #poolGridDiv{
+        position: relative;
+        height: 98%;
+        width: 99.3%;
+        left: 0.7%;
+        top: 1%;
+    }
+    #gbox_poolGrid{
+        box-shadow: 0 0 10px 5px #f39095;
+    }
+</style>
+
+<body>
+<div id="poolGridDiv">
+    <table id="poolGrid"></table>
+    <div id="poolPager"></div>
+</div>
+<div id="confirmAdd" title="Add these questions to the exam?">
+    <p id="confirmation"><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span></p>
+    <p>Are you sure?</p>
+</div>
+<div id="confirmReturn" title="Add these questions to the exam?">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Return to the previous page without adding from your question pool?</p>
+</div>
+</body>
+</html>

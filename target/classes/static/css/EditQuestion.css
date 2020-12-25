@@ -1,0 +1,24 @@
+#bigDiv{
+    background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+}
+#mainDiv{
+    height: 90%;
+}
+#settingDiv{
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#editDiv{
+    height: 83%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#navDiv{
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.navBtn{
+    width: 100px;
+}

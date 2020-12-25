@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Settings</title>
+
+    <!--jsZIP-->
+    <script src="js/jszip.js"></script>
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <!--jqGrid-->
+    <script src="plugins/jqgrid/js/trirand/i18n/grid.locale-en.js"></script>
+    <!-- This is the Javascript file of jqGrid -->
+    <script src="plugins/jqgrid/js/trirand/src/jquery.jqGrid.js"></script>
+    <link rel="stylesheet" href="plugins/bootstrap-3.4.1/css/bootstrap3-theme-paper.css">
+    <script>
+        $.jgrid.defaults.styleUI = 'Bootstrap';
+    </script>
+    <!-- A link to a Boostrap and jqGrid Bootstrap CSS files-->
+    <link rel="stylesheet" type="text/css" media="screen" href="plugins/jqgrid/css/trirand/ui.jqgrid-bootstrap.css" />
+    <script src="plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/ExamVersionGrid.js"></script>
+</head>
+
+<style>
+    body{
+        height: 99vh;
+        width: 100vw;
+    }
+    #bigDiv{
+        position: relative;
+        height: 99.5%;
+        width: 99%;
+        left: 0.5%;
+        top: 0.5%;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 5px #f39095;
+    }
+    .gridDiv{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
+<body>
+<div id="bigDiv">
+    <div id="accordion">
+        <h3>Edit Courses</h3>
+        <div id="courseGridDiv" class="gridDiv">
+            <table id="courseGrid"></table>
+            <div id="coursePager"></div>
+        </div>
+
+        <h3>Edit Exam Types</h3>
+        <div id="examTypeGridDiv" class="gridDiv">
+            <table id="examTypeGrid"></table>
+            <div id="examTypePager"></div>
+        </div>
+
+        <h3>Edit Question Types</h3>
+        <div id="questionTypeGridDiv" class="gridDiv">
+            <table id="questionTypeGrid"></table>
+            <div id="questionTypePager"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

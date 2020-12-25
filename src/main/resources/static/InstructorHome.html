@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Management</title>
+    <script src="js/BackgroundManagement.js"></script>
+    <link rel="stylesheet" href="css/CardFlip.css">
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/InstructorHome.js"></script>
+</head>
+
+<style>
+    #bigDiv{
+        width: 95vw;
+        height: 90vh;
+        box-shadow: 0 0 15px 5px #78C2AD;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #flipDiv{
+        width: 90vw;
+        height: 80vh;
+    }
+    .card-container, .front, .back {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .front {
+        background: rgba(120, 194, 173, 0.9);
+        box-shadow: 2px 2px 8px 3px rgba(120, 194, 173, 0.71);
+
+    }
+    .back {
+        background: rgba(243, 150, 154, 0.8);
+        box-shadow: 2px 2px 10px 3px rgba(243, 150, 154, 0.7);
+    }
+</style>
+
+<body class="vh-100 d-flex justify-content-center align-items-center m-0">
+<div id="bigDiv" class="rounded overflow-hidden">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+            <strong class="ml-1">Exam Management</strong>
+        </a>
+        <div class="collapse navbar-collapse">
+            <span id="instructorName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+            <form action="/managementLogout" class="mt-auto">
+                <button class="btn btn-primary btn-sm ml-auto" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div id="flipDiv" class="container flex-nowrap d-flex justify-content-around align-items-center p-0">
+        <div class="card-container" id="createExam">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light "><strong>Create Exam</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont=">"></span>
+                </div>
+                <form action="/getExam" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <div class="form-group">
+                        <label for="createExamSelect" class="text-light">Choose Exam to Create</label>
+                        <select class="form-control" id="createExamSelect" name="createExamSelect">
+                            <option value="new">Create New</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-container" id="submittedExams">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light"><strong>Submitted Exams</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont="E"></span>
+                </div>
+                <form id="submittedForm" action="/getExam" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <div class="form-group">
+                        <label for="viewExamSelect" class="text-light">Choose Exam to View</label>
+                        <select class="form-control" id="viewExamSelect" name="viewExamSelect">
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit" onclick="checkSubmittedSelection()">View</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-container" id="gradeExams">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light"><strong>Grade Exams</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont="Ã"></span>
+                </div>
+                <form id="gradeForm" action="/gradeExam" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <div class="form-group">
+                        <label for="gradeExamSelect" class="text-light">Choose Exam to Grade</label>
+                        <select class="form-control" id="gradeExamSelect" name="gradeExamSelect">
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit" onclick="checkGradeSelection()">Grade</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-container" id="viewStudentGrades">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light"><strong>Student Grades</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont='"'></span>
+                </div>
+                <form action="/viewStudentGrades" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <label for="viewGradesSelect" class="text-light mb-0">Choose Course to View</label>
+                    <select class="form-control w-75" id="viewGradesSelect" name="viewGradesSelect">
+                    </select>
+                    <label for="year" class="text-light mb-0">Year</label>
+                    <input type="number" class="form-control w-50" id="year" name="year">
+                    <button class="btn btn-primary mt-2" type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-container" id="questionPool">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light"><strong>My Question Pool</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont="Ø"></span>
+                </div>
+                <form action="/myQuestionPool" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <button class="btn btn-primary" type="submit">View</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

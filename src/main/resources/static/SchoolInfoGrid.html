@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Information</title>
+
+    <!--jsZIP-->
+    <script src="js/jszip.js"></script>
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <!--jqGrid-->
+    <script src="plugins/jqgrid/js/trirand/i18n/grid.locale-en.js"></script>
+    <!-- This is the Javascript file of jqGrid -->
+    <script src="plugins/jqgrid/js/trirand/src/jquery.jqGrid.js"></script>
+    <!--Bootstrap3-papertheme-->
+    <link rel="stylesheet" href="plugins/bootstrap-3.4.1/css/bootstrap3-theme-paper.css">
+    <script>
+        $.jgrid.defaults.styleUI = 'Bootstrap';
+    </script>
+    <!-- A link to a Boostrap and jqGrid Bootstrap CSS files-->
+    <link rel="stylesheet" type="text/css" media="screen" href="plugins/jqgrid/css/trirand/ui.jqgrid-bootstrap.css" />
+    <script src="plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/SchoolInfoGrid.js"></script>
+</head>
+
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    #universityGridDiv{
+        position: relative;
+        height: 99%;
+        width: 99%;
+        left: 0.5%;
+        top: 0.5%;
+    }
+    #gbox_universityGrid{
+        box-shadow: 0 0 10px 5px #f39095;
+    }
+</style>
+
+<body>
+<div id="universityGridDiv">
+     <table id="universityGrid"></table>
+     <div id="universityPager"></div>
+</div>
+
+<div id="facultyDialog" role="dialog" title="Edit Faculties" class="container">
+    <table id="facultyGrid"></table>
+    <div id="facultyPager"></div>
+</div>
+
+<div id="majorDialog" role="dialog" title="Edit Majors" class="container">
+    <table id="majorGrid"></table>
+    <div id="majorPager"></div>
+</div>
+</body>
+</html>

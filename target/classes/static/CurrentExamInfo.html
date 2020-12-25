@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Information</title>
+    <script src="js/BackgroundStudent.js"></script>
+    <script src="js/Common.js"></script>
+    <link rel="stylesheet" href="css/CardFlip.css">
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!--datetimepicker-->
+    <link rel="stylesheet" href="plugins/jqgrid/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="plugins/jqgrid/css/jquery-ui-timepicker-addon.css">
+    <script src="plugins/jqgrid/js/jquery-ui-timepicker-addon.js"></script>
+    <script src="js/CurrentExamInfo.js"></script>
+</head>
+
+<style>
+    #bigDiv{
+        width: 95vw;
+        height: 90vh;
+        box-shadow: 0 0 15px 5px #f3969a;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #infoDiv{
+        height: 90%;
+    }
+    #examInfo{
+        /*background: rgba(128, 205, 184, 0.51);*/
+        width: 90%;
+        height: 90%;
+    }
+</style>
+
+<body class="vh-100 d-flex justify-content-center align-items-center m-0">
+<div id="bigDiv" class="rounded overflow-hidden">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand d-flex align-items-center" href="StudentHome.html">
+            <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+            <strong class="ml-1">Home</strong>
+        </a>
+        <div class="collapse navbar-collapse">
+            <span id="studentName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+            <form action="/studentLogout" class="mt-auto">
+                <button class="btn btn-secondary btn-sm ml-auto" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <div id='infoDiv' class="d-flex align-items-center justify-content-center">
+        <h3 id='noExam' class="text-center text-hide">There is no upcoming exam for this course.</h3>
+        <div id='examInfo' class="flex-column d-none p-2 rounded align-content-between justify-content-center">
+            <div class="p-0 d-flex justify-content-between w-100">
+                <div id="divLeft" class="w-50 d-inline-block container">
+                    <legend>Exam Info</legend>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="examName">Exam Name:</label>
+                        <input class="form-control col-7" id="examName" type="text" readonly>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="course">Course:</label>
+                        <input class="form-control col-7" id="course" type="text" readonly>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="examType">Exam Type:</label>
+                        <input class="form-control col-7" id="examType" type="text" readonly>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="startTime">Start Time:</label>
+                        <input class="form-control col-7" id="startTime" type="text" readonly>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="endTime">End Time:</label>
+                        <input class="form-control col-7" id="endTime" type="text" readonly>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label px-0 col-3 justify-content-start" for="score">Full Marks:</label>
+                        <input class="form-control col-7" id="score" type="text" readonly>
+                    </div>
+                </div>
+                <div id="divRight" class="w-50 d-inline-block container">
+                    <legend>Exam Layout</legend>
+                </div>
+            </div>
+            <button class="btn btn-secondary btn-lg" onclick="startExam()">Start</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

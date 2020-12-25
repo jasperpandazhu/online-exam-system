@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Submitted Exams</title>
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <!--export to Word-->
+    <script src="plugins/exportToWord/FileSaver.js"></script>
+    <script src="plugins/exportToWord/jquery.wordexport.js"></script>
+
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!--local js files-->
+    <script src="js/Common.js"></script>
+    <script src="js/ViewSubmittedExam.js"></script>
+</head>
+
+<style>
+    body{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+    }
+    #bigDiv{
+        width: 100%;
+        height: 91%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #mainDiv{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    }
+    #displayDiv{
+        height: 90%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #exportDiv{
+        height: 9%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+</style>
+
+<body class="vh-100 vw-100">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="InstructorHome.html">
+        <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+        <strong class="ml-1">Exam Management</strong>
+    </a>
+    <div class="collapse navbar-collapse">
+        <span id="instructorName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+        <form action="/managementLogout" class="mt-auto">
+            <button class="btn btn-primary btn-sm ml-auto" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+<div id="bigDiv" class="d-flex pr-2 pt-3 pb-2">
+    <div id="div1" class="d-flex justify-content-center align-items-center flex-column col-2">
+        <form action="javascript:;" class="w-100">
+            <div class="form-group">
+                <label for="examName">Exam Name:</label>
+                <input type="text" class="form-control" id="examName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="examType">Exam Type:</label>
+                <input type="text" class="form-control" id="examType" readonly>
+            </div>
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <input type="text" class="form-control" id="course" readonly>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="text" class="form-control" id="startTime" readonly>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="text" class="form-control" id="endTime" readonly>
+            </div>
+        </form>
+        <br>
+        <button type="button" class="btn btn-primary disabled">Create</button>
+    </div>
+
+    <div id="mainDiv" class="col-10 rounded p-2">
+        <div id="displayDiv" class="rounded overflow-auto p-4">
+            <div class="d-flex justify-content-center align-items-center">
+                <h2 id="examTitle" class="d-inline position-relative"></h2>
+            </div>
+        </div>
+        <div id="exportDiv" class="rounded d-flex justify-content-end align-items-center mt-1 pr-3">
+            <button class="word-export btn btn-secondary">Export as .doc</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

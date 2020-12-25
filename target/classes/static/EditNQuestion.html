@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Number Question</title>
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!--local css and js files-->
+    <link rel="stylesheet" href="css/EditQuestion.css">
+    <script src="js/Common.js"></script>
+    <script src="js/EditQuestion.js"></script>
+    <!--ckeditor-->
+    <script src="plugins/ckeditor/ckeditor/ckeditor.js"></script>
+</head>
+
+<body class="vh-100">
+<div id="bigDiv" class="h-100 p-2">
+    <div id="mainDiv">
+        <div id="settingDiv" class="rounded container-fluid d-flex align-items-center justify-content-between form-inline px-5">
+            <div class="form-group" id="difficulty">
+                <label for="difficulty">Difficulty:</label>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="easy" name="difficulty" class="custom-control-input" value="1">
+                    <label class="custom-control-label" for="easy">Easy</label>
+                </div>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="normal" name="difficulty" class="custom-control-input" value="2">
+                    <label class="custom-control-label" for="normal">Normal</label>
+                </div>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="hard" name="difficulty" class="custom-control-input" value="3">
+                    <label class="custom-control-label" for="hard">Hard</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="score">Score:</label>
+                <input class="form-control d-inline mx-2" id="score" type="number" min="1" style="width: 70px">
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="pool">
+                    <label class="custom-control-label" for="pool">Add to Pool</label>
+                </div>
+            </div>
+            <div class="form-group" id="answer">
+                <label class="control-label" for="number">Answer:</label>
+                <input class="form-control d-inline mx-2" id="number" type="text"  style="width: 100px">
+            </div>
+        </div>
+        <div id="editDiv" class="rounded my-1 px-5 py-3 overflow-auto">
+            <div class="form-group">
+                <label for="question"><strong>Question:</strong></label>
+                <textarea name="editor" id="question" rows="10" cols="80"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="navDiv" class="rounded d-flex flex-nowrap justify-content-around align-items-center">
+        <div class="d-flex justify-content-around w-25">
+            <button class="btn btn-warning navBtn" id="delete" onclick="insertDeleteQuestion(this.id)">Delete</button>
+            <button class="btn btn-warning navBtn" id="insert" onclick="insertDeleteQuestion(this.id)">Insert</button>
+        </div>
+        <div class="d-flex justify-content-around w-25">
+            <button class="btn btn-info navBtn" onclick="goToPrevious()">Previous</button>
+            <button class="btn btn-info navBtn" onclick="goToNext()">Next</button>
+        </div>
+        <div class="d-flex justify-content-around w-25">
+            <button class="btn btn-danger navBtn" onclick="editQuestion()">Save</button>
+            <button class="btn btn-danger navBtn" onclick="returnToLayout()">Back</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    // Replace the <textarea> with a CKEditor
+    CKEDITOR.replace('question');
+
+    $(document).ready(function(){
+        $.ajax({
+            url: '/loadQuestion',
+            type: "GET",
+            success: function(data){
+                var qInfo = eval(data);
+                loadCommon(qInfo[0]);
+                loadNQ(qInfo[0]);
+            }
+        });
+    });
+</script>
+
+</html>

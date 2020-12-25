@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33a68f0d-6592-448e-9f0f-c556a7915cf9" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>QTypeOrder</find>
+      <find>getQuestionTypeInfo</find>
+      <find>setAttri</find>
+      <find>row</find>
+      <find>getQuestionsRandom</find>
+      <find>CreateExam.</find>
+      <find>ui-state-active</find>
+      <find>PastCo</find>
+      <find>pastCourse</find>
+      <find>PastCourse</find>
+      <find>currentCourse</find>
+      <find>CurrentCourse</find>
+      <find>tooltip</find>
+      <find>setA</find>
+      <find>session.rem</find>
+      <find>setCookie(&quot;</find>
+      <find>response.add</find>
+      <find>setCookie</find>
+      <find>setC</find>
+      <find>removeC</find>
+      <find>form-control-sm</find>
+      <find>pl-0</find>
+      <find>col-8</find>
+      <find>col-7</find>
+      <find>row my-1</find>
+      <find>AddFromQPool.html</find>
+      <find>loadQuestion</find>
+      <find>dialog</find>
+      <find>showMajorGrid</find>
+      <find>.dialog({</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>col-10</replace>
+      <replace>col-2</replace>
+      <replace>d</replace>
+      <replace>id=&quot;pool&quot;</replace>
+      <replace>onclick=&quot;returnToLayout()&quot;&gt;Back&lt;/button&gt;</replace>
+      <replace>onclick=&quot;goToNext()&quot;&gt;Next&lt;/button&gt;</replace>
+      <replace>onclick=&quot;insertQuestion()&quot;&gt;Insert&lt;/button&gt;</replace>
+      <replace>id=&quot;delete&quot; onclick=&quot;insertDeleteQuestion(this.id)&quot;</replace>
+      <replace>id=&quot;insert&quot; onclick=&quot;insertDeleteQuestion(this.id)&quot;</replace>
+      <replace>action=&quot;javascript:;&quot;</replace>
+      <replace>pool</replace>
+      <replace>class='mt-3'</replace>
+      <replace>class='mt-4'</replace>
+      <replace>export-content</replace>
+      <replace>&lt;p&gt;&lt;strong&gt;</replace>
+      <replace>Question &quot; + (i+1) + &quot;:</replace>
+      <replace>&lt;h4 class='d-inline-block mb-3'&gt;</replace>
+      <replace>&lt;h3&gt;</replace>
+      <replace>h4</replace>
+      <replace>h3</replace>
+      <replace>displayDiv</replace>
+      <replace />
+      <replace>QOrder</replace>
+      <replace>stuGrades</replace>
+      <replace>row my-1</replace>
+      <replace>form-control</replace>
+      <replace>pl-0 mb-0</replace>
+      <replace>col-7</replace>
+      <replace>col-8</replace>
+      <replace>row my-1 d-none</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Lexi\IdeaProjects\exam\src\main\resources\static</dir>
+      <dir>C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/static/StudentGradesStats.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/StudentExamStats.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/official/OfficialProject/controller/instructor/ViewStudentGradesController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/AddFromQPool.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/AdminGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/AddFromQPool.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/CreateNewExam.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/CreateNewExam.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/CurrentExamInfo.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/CurrentExamInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/EditPoolFBQ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/EditPoolMCQ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/EditPoolMRQ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/EditPoolNQ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/EditPoolTFQ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ExamInfoGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ExamInfoGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ExamLayout.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ExamLayout.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ExamVersionGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ExamVersionGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/GradeExam.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/GradeExam.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/InstructorGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ExamInProgress.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/InstructorHome.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/InstructorHome.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/MyQuestionPool.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/MyQuestionPool.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/MyQuestionPoolGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/MyQuestionPoolGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/SchoolInfoGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/StudentGradesGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/StudentGradesGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/StudentGrid.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/StudentHome..js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/StudentHome.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ViewMyGrades.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ViewMyGrades.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ViewStudentGrades.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ViewStudentGrades.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ViewExam.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/ViewSubmittedExam.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/SchoolInfoGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/InstructorGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/StudentGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/AdminGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/official/OfficialProject/filter/StudentLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/official/OfficialProject/filter/ManagementLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Common.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/ExamInProgress.js" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="672" />
+    <option name="y" value="-16" />
+    <option name="width" value="1346" />
+    <option name="height" value="776" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="instructor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfficialProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfficialProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565250706732" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FilterPractice" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.official.OfficialProject.service.CommonService" />
+      <recent name="com.official.OfficialProject.service.EditQuestionService" />
+      <recent name="com.official.OfficialProject.service.jqGridService" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.official.OfficialProject.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static" />
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static\instructor" />
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static\css" />
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static\html" />
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static\LoginHTML" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.official.exam" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lexi\IdeaProjects\OfficialProject\src\main\resources\static\css" />
+      <recent name="C:\Users\Lexi\IdeaProjects\exam\src\main\resources\static\plugins\bootstrap-3.4.1\js" />
+      <recent name="C:\Users\Lexi\IdeaProjects\exam\src\main\resources\static\plugins\bootstrap-3.4.1\css" />
+      <recent name="C:\Users\Lexi\IdeaProjects\exam\src\main\resources\static" />
+      <recent name="C:\Users\Lexi\IdeaProjects\exam\src\main\java\com\official\exam\service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="OfficialProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.official.OfficialProject.ExamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33a68f0d-6592-448e-9f0f-c556a7915cf9" name="Default Changelist" comment="" />
+      <created>1562567942839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562567942839</updated>
+      <workItem from="1562567945715" duration="16908000" />
+      <workItem from="1562587996151" duration="32813000" />
+      <workItem from="1562680643278" duration="23192000" />
+      <workItem from="1562740842488" duration="36719000" />
+      <workItem from="1562834558016" duration="6740000" />
+      <workItem from="1562849825561" duration="5193000" />
+      <workItem from="1562856297820" duration="281000" />
+      <workItem from="1562856649293" duration="262000" />
+      <workItem from="1562857007804" duration="12602000" />
+      <workItem from="1562873613448" duration="161000" />
+      <workItem from="1562873819451" duration="39529000" />
+      <workItem from="1562956261605" duration="19390000" />
+      <workItem from="1563012738272" duration="30932000" />
+      <workItem from="1563174567086" duration="80298000" />
+      <workItem from="1563336064015" duration="19594000" />
+      <workItem from="1563367382967" duration="58625000" />
+      <workItem from="1563537686868" duration="1990000" />
+      <workItem from="1563541793544" duration="8477000" />
+      <workItem from="1563595883213" duration="51238000" />
+      <workItem from="1563847129597" duration="3174000" />
+      <workItem from="1563850384265" duration="38051000" />
+      <workItem from="1563965732893" duration="46551000" />
+      <workItem from="1564067576598" duration="4417000" />
+      <workItem from="1564109507770" duration="81509000" />
+      <workItem from="1564459432563" duration="14463000" />
+      <workItem from="1564567454442" duration="101757000" />
+      <workItem from="1565083737066" duration="26512000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="761378000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.24534413" />
+      <window_info id="Structure" order="1" sideWeight="0.501006" side_tool="true" weight="0.17975709" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4979757" visible="true" weight="0.13219285" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5349922" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020243" side_tool="true" weight="0.31415242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32970452" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24939272" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Module Dependencies" order="9" weight="0.32955465" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.2639676" />
+      <window_info id="Structure" order="1" sideWeight="0.501006" side_tool="true" weight="0.17975709" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4979757" visible="true" weight="0.19906688" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5349922" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020243" side_tool="true" weight="0.31415242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32970452" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24939272" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Module Dependencies" order="9" weight="0.32955465" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/EditPoolTFQ.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/EditTFQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1474" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ExamInfoGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="363" column="3" selection-start-line="363" selection-start-column="3" selection-end-line="363" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ExamLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2916">
+          <caret line="162" column="1" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/CurrentExamInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/CreateNewExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ExamInfoGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/EditMRQuestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ExamVersionGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="356" column="1" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/GradeExam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ExamInProgress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ExamLayout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ExamVersionGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/GradeExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/MyQuestionPool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/InstructorHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ManagementHome.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ManagementWelcome.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/MyQuestionPool.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ManagementLogin.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/MyQuestionPoolGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="179" column="2" selection-start-line="179" selection-start-column="2" selection-end-line="179" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/MyQuestionPoolGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/SchoolInfoGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/StudentGradesGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/StudentGradesGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/StudentHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/StudentLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ViewMyGrades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ViewMyGrades.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/StudentGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/StudentHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ViewStudentGrades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ViewStudentGrades.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ViewSubmittedExam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ViewSubmittedExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/InstructorGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/SchoolInfoGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="232" column="22" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/InstructorHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/InstructorGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1799">
+          <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/StudentGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="155" column="18" lean-forward="true" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.16/tomcat-embed-core-9.0.16.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/official/OfficialProject/filter/StudentLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="49" lean-forward="true" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/AdminGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/ExamInProgress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="343" column="33" selection-start-line="343" selection-start-column="33" selection-end-line="343" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/official/OfficialProject/filter/ManagementLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/official/OfficialProject/controller/student/TakeExamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/CurrentExamInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/CreateNewExam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/CreateExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/EditQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3096" />
+      </provider>
+    </entry>
+  </component>
+</project>

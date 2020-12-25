@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Layout</title>
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/ExamLayout.js"></script>
+</head>
+
+<style>
+    #mainDiv{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    }
+    #headingDiv{
+        height: 15%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #bodyDiv{
+        height: 74%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #submitDiv{
+        height: 10%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .qButton{
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<body class="vh-100">
+<div id="mainDiv" class="p-2 h-100">
+    <div id="headingDiv" class="rounded pt-1 pb-2">
+        <div class="text-center px-2 mb-1">
+            <h3 class="text-center d-inline">Create Exam</h3>
+            <div class="float-right mr-3">
+                <span class="mr-2">Full Score:</span>
+                <span id="fullScore">0</span>
+            </div>
+        </div>
+        <form action="javascript:;" class="w-100 form-inline px-2">
+            <div class="form-group mx-2">
+                <label for="qType" class="mr-2">Question Type:</label>
+                <select class="form-control custom-select-sm" id="qType">
+                    <option value="M">Multiple Choice</option>
+                    <option value="T">True or False</option>
+                    <option value="R">Multiple Response</option>
+                    <option value="F">Fill in the Blank</option>
+                    <option value="N">Number</option>
+                </select>
+            </div>
+            <div class="form-group mx-1">
+                <label for="qNumber" class="mr-2">Number of Questions:</label>
+                <input type="number" id="qNumber" class="form-control form-control-sm w-25">
+            </div>
+            <button class="btn btn-secondary ml-auto mr-2" data-toggle="tooltip" data-placement="left" title="Add new" onclick="addNew()">Add</button>
+            <button class="btn btn-secondary mr-2" data-toggle="tooltip" data-placement="left" title="Add from question pool" onclick="addFromQPool()">QPool</button>
+        </form>
+    </div>
+    <div id="bodyDiv" class="rounded p-2 overflow-auto my-1"></div>
+    <div id="submitDiv" class="rounded d-flex justify-content-end align-items-center px-3">
+        <button class="btn btn-secondary" type="button" onclick="submitExam()">Submit Exam</button>
+    </div>
+    <div id="confirmDeleteAll" title="Delete all questions?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Delete all of the questions for this question type?</p>
+    </div>
+    <div id="confirmSubmit" title="Submit the exam?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>You will not be able to edit the exam once it has been submitted. Are you sure?</p>
+    </div>
+</div>
+</body>
+</html>

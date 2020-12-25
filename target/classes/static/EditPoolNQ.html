@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Number Question</title>
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!--local css and js files-->
+    <link rel="stylesheet" href="css/EditQuestion.css">
+    <script src="js/Common.js"></script>
+    <script src="js/EditQuestion.js"></script>
+    <script src="js/EditPoolQuestion.js"></script>
+    <!--ckeditor-->
+    <script src="plugins/ckeditor/ckeditor/ckeditor.js"></script>
+</head>
+
+<body class="vh-100">
+<div id="bigDiv" class="h-100 p-2">
+    <div id="mainDiv">
+        <div id="settingDiv" class="rounded container-fluid d-flex align-items-center justify-content-between form-inline px-5">
+            <div class="form-group" id="difficulty">
+                <label for="difficulty">Difficulty:</label>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="easy" name="difficulty" class="custom-control-input" value="1">
+                    <label class="custom-control-label" for="easy">Easy</label>
+                </div>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="normal" name="difficulty" class="custom-control-input" value="2">
+                    <label class="custom-control-label" for="normal">Normal</label>
+                </div>
+                <div class="custom-control custom-radio mx-2">
+                    <input type="radio" id="hard" name="difficulty" class="custom-control-input" value="3">
+                    <label class="custom-control-label" for="hard">Hard</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="score">Score:</label>
+                <input class="form-control d-inline ml-2" id="score" type="number" min="1" style="width: 70px">
+            </div>
+            <div class="form-group" id="answer">
+                <label class="control-label" for="number">Answer:</label>
+                <input class="form-control d-inline mx-2" id="number" type="text" style="width: 100px">
+            </div>
+        </div>
+        <div id="editDiv" class="rounded my-1 px-5 py-3 overflow-auto">
+            <div class="form-group">
+                <label for="question"><strong>Question:</strong></label>
+                <textarea name="editor" id="question" rows="10" cols="80"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="navDiv" class="rounded d-flex flex-nowrap justify-content-end align-items-center px-3">
+        <button class="btn btn-secondary navBtn mr-4" onclick="editPoolQuestion()">Save</button>
+        <button class="btn btn-secondary navBtn" onclick="goBack()">Return</button>
+        <div id="confirmReturn" title="Cancel editing?">
+            <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>The changes you have made will not be saved. Are you sure?</p>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    // Replace the <textarea> with a CKEditor
+    CKEDITOR.replace('question');
+    var url = new URL(window.location.href);
+    $(document).ready(function() {
+        loadPoolQuestion(url.searchParams.get("QTypeID"), url.searchParams.get("CourseID"), url.searchParams.get("id"));
+        confirmReturnDialog();
+    })
+</script>
+
+</html>

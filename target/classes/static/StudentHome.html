@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Home</title>
+    <script src="js/BackgroundStudent.js"></script>
+    <link rel="stylesheet" href="css/CardFlip.css">
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/StudentHome.js"></script>
+</head>
+
+<style>
+    #bigDiv{
+        width: 95vw;
+        height: 90vh;
+        box-shadow: 0 0 15px 5px #f3969a;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #flipDiv{
+        width: 90vw;
+        height: 80vh;
+    }
+    .card-container, .front, .back {
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+    }
+    .front {
+        background: rgba(243, 150, 154, 0.8);
+        box-shadow: 2px 2px 10px 3px rgba(243, 150, 154, 0.7);
+    }
+    .back {
+        background: rgba(120, 194, 173, 0.9);
+        box-shadow: 2px 2px 8px 3px rgba(120, 194, 173, 0.7);
+    }
+</style>
+
+<body class="vh-100 d-flex justify-content-center align-items-center m-0">
+<div id="bigDiv" class="rounded overflow-hidden">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+            <strong class="ml-1">Home</strong>
+        </a>
+        <div class="collapse navbar-collapse">
+            <span id="studentName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+            <form action="/studentLogout" class="mt-auto">
+                <button class="btn btn-secondary btn-sm ml-auto" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div id="flipDiv" class="container flex-nowrap d-flex justify-content-around align-items-center mx-auto px-5">
+        <div class="card-container" id="createExam">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light "><strong>Take Exam</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont=">"></span>
+                </div>
+                <form action="CurrentExamInfo.html" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <div class="form-group">
+                        <label for="currentCourse" class="text-light">Upcoming Exams:</label>
+                        <select class="form-control" id="currentCourse" name="Course">
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary" type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-container" id="submittedExams">
+            <div class="sides">
+                <div class="front d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="text-light"><strong>My Grades</strong></h5>
+                    <span class="iconSpan2 mb-3" data-iconfont="E"></span>
+                </div>
+                <form action="/viewMyGrades" method="get" class="back d-flex flex-column justify-content-center align-items-center">
+                    <label for="year" class="text-light">My Past Exams:</label>
+                    <input type="number" id="year" name="year" class="form-control w-50">
+                    <button class="btn btn-secondary mt-3" type="submit">View</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Grades</title>
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/ViewMyGrades.js"></script>
+</head>
+
+<style>
+    body{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));;
+    }
+    #bigDiv{
+        width: 100%;
+        height: 91%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #div2{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(229, 255, 253, 0.9));
+    }
+    #gradesDiv{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+</style>
+
+<body class="vh-100 vw-100">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="StudentHome.html">
+        <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+        <strong class="ml-1">Exam Management</strong>
+    </a>
+    <div class="collapse navbar-collapse">
+        <span id="studentName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+        <form action="/studentLogout" class="mt-auto">
+            <button class="btn btn-primary btn-sm ml-auto" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<div id="bigDiv" class="position-relative d-flex pr-2 pt-3 pb-2">
+    <div class="d-flex justify-content-center align-items-center flex-column col-2" id="div1">
+        <form action="javascript:;" class="w-100">
+            <div class="form-group">
+                <label for="examName">Exam:</label>
+                <select type="text" class="form-control" id="examName" name="examName">
+                </select>
+            </div>
+        </form>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg" onclick="getMyGrades()">View</button>
+    </div>
+    <div id="div2" class=" h-100 col-10 rounded p-2">
+        <div id="gradesDiv" class="rounded h-100 w-100 p-4">
+            <h2>Exam Information</h2>
+            <div class="container my-2">
+                <div class="row my-1">
+                    <h4 class="d-inline col-3">Exam Name:</h4>
+                    <input type="text" class="form-control w-25 d-inline col-4" id="name" readonly>
+                </div>
+                <div class="row my-1">
+                    <h4 class="d-inline col-3">Course:</h4>
+                    <input type="text" class="form-control w-25 d-inline col-4" id="course" readonly>
+                </div>
+                <div class="row my-1">
+                    <h4 class="d-inline col-3">Exam Type:</h4>
+                    <input type="text" class="form-control w-25 d-inline col-4" id="examType" readonly>
+                </div>
+            </div>
+            <h2>My Grades</h2>
+            <div class="container my-2">
+                <div class="row my-1 d-none" id="MScoreRow">
+                    <h4 class="d-inline col-4">Multiple choice:</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="MScore" value="0" readonly>
+                    <h4 class="d-inline col-2 text-center">out of</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullMScore" value="0" readonly>
+                </div>
+                <div class="row my-1 d-none" id="TScoreRow">
+                    <h4 class="d-inline col-4">True or false:</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="TScore" value="0" readonly>
+                    <h4 class="d-inline col-2 text-center">out of</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullTScore" value="0" readonly>
+                </div>
+                <div class="row my-1 d-none" id="RScoreRow">
+                    <h4 class="d-inline col-4">Multiple response:</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="RScore" value="0" readonly>
+                    <h4 class="d-inline col-2 text-center">out of</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullRScore" value="0" readonly>
+                </div>
+                <div class="row my-1 d-none" id="FScoreRow">
+                    <h4 class="d-inline col-4">Fill in the blank:</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="FScore" value="0" readonly>
+                    <h4 class="d-inline col-2 text-center">out of</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullFScore" value="0" readonly>
+                </div>
+                <div class="row my-1 d-none" id="NScoreRow">
+                    <h4 class="d-inline col-4">Number:</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="NScore" value="0" readonly>
+                    <h4 class="d-inline col-2 text-center">out of</h4>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullNScore" value="0" readonly>
+                </div>
+                <div class="row my-1">
+                    <h2 class="d-inline col-4">TOTAL:</h2>
+                    <input type="text" class="form-control d-inline marks col-1" id="totalScore" value="0" readonly>
+                    <h2 class="d-inline col-2 text-center">OUT OF</h2>
+                    <input type="text" class="form-control d-inline marks col-1" id="fullTotalScore" value="0" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

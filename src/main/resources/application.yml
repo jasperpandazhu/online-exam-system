@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: admin
+---
+server:
+  port: 8083
+spring:
+  profiles: student
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=OfficialProject;integratedSecurity=true;
+    data:
+      - classpath:MStudent.sql
+---
+server:
+  port: 8084
+spring:
+  profiles: admin
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=OfficialProject;integratedSecurity=true;
+    data:
+      - classpath:MAdmin.sql
+    tomcat:
+      initial-size: 10
+      min-idle: 10
+      max-active: 100
+
+UpLoad:
+  UpLoadPath: C:\\temp

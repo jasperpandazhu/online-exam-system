@@ -1,0 +1,26 @@
+@font-face{
+    font-family: "icons";
+    src: url('raphaelicons/raphaelicons-webfont.eot'),
+    url('raphaelicons/raphaelicons-webfont.svg'),
+    url('raphaelicons/raphaelicons-webfont.ttf'),
+    url('raphaelicons/raphaelicons-webfont.woff');
+    font-style: normal;
+}
+.iconSpan{
+    height: 30px;
+}
+.iconSpan::before{
+    content: attr(data-iconfont);
+    font-size: 40px;
+    font-family: icons;
+    color: white;
+}
+.iconSpan2{
+    height: 20px;
+}
+.iconSpan2::before{
+    content: attr(data-iconfont);
+    font-size: 60px;
+    font-family: icons;
+    color: white;
+}

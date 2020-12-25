@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="css/CardFlip.css">-->
+    <script src="js/BackgroundLogin.js"></script>
+    <script src="js/Login.js"></script>
+</head>
+
+<style>
+    @font-face{
+        font-family: "icons";
+        src: url('css/raphaelicons/raphaelicons-webfont.eot'),
+        url('css/raphaelicons/raphaelicons-webfont.svg'),
+        url('css/raphaelicons/raphaelicons-webfont.ttf'),
+        url('css/raphaelicons/raphaelicons-webfont.woff');
+        font-style: normal;
+    }
+    body{
+        height: 100vh;
+    }
+    #canvas2{
+        z-index: -1;
+    }
+    #tabsDiv{
+        width: 30%;
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 15px 5px #78C2AD;
+    }
+    .iconSpan{
+        width: 40px;
+    }
+    .iconSpan::after{
+        content: attr(data-iconfont);
+        font-size: 40px;
+        font-family: icons;
+        /*color: #78C2AD;*/
+        color: #F3969A;
+    }
+</style>
+
+<body class="d-flex justify-content-center align-items-center m-0">
+
+<canvas id="canvas2" class="position-absolute"></canvas>
+
+<div id="tabsDiv" class="pb-3 rounded-lg">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+            <a class="nav-link text-secondary active" data-toggle="tab" href="#instructor">Instructor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" data-toggle="tab" href="#admin">Administrator</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active show text-center my-3" id="instructor">
+            <legend>Instructor Login</legend>
+            <form action="javascript:;">
+                <div class="form-group form-inline justify-content-center mt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="iconSpan" data-iconfont="L"></span>
+                        <input type="text" name="username" class="form-control text-center" id="usernameInstructor" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="form-group form-inline justify-content-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="iconSpan" data-iconfont="W"></span>
+                        <input type="password" name="password" class="form-control text-center" id="passwordInstructor" placeholder="Password" required>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-danger d-none" id="errorMsg1">*Username or password is incorrect.</p>
+                    <button type="button" class="btn btn-secondary" id="InstructorButton" onclick="loginInstructor()">Sign In</button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade text-center my-3" id="admin">
+            <legend>Admin Login</legend>
+            <form action="javascript:;">
+                <div class="form-group form-inline justify-content-center mt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="iconSpan" data-iconfont="L"></span>
+                        <input type="text" name="username" class="form-control text-center" id="usernameAdmin" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="form-group form-inline justify-content-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="iconSpan" data-iconfont="t"></span>
+                        <input type="password" name="password" class="form-control text-center" id="passwordAdmin" placeholder="Password" required>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-danger d-none" id="errorMsg2">*Username or password is incorrect.</p>
+                    <button type="button" class="btn btn-secondary" id="AdminButton" onclick="loginAdmin()">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

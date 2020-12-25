@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grades Grid</title>
+
+    <!--jsZIP-->
+    <script src="js/jszip.js"></script>
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <!--jqGrid-->
+    <script src="plugins/jqgrid/js/trirand/i18n/grid.locale-en.js"></script>
+    <!-- This is the Javascript file of jqGrid -->
+    <script src="plugins/jqgrid/js/trirand/src/jquery.jqGrid.js"></script>
+    <link rel="stylesheet" href="plugins/bootstrap-3.4.1/css/bootstrap3-theme-paper.css">
+    <script>
+        $.jgrid.defaults.styleUI = 'Bootstrap';
+    </script>
+    <!-- A link to a Boostrap and jqGrid Bootstrap CSS files-->
+    <link rel="stylesheet" type="text/css" media="screen" href="plugins/jqgrid/css/trirand/ui.jqgrid-bootstrap.css" />
+    <script src="plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/StudentGradesGrid.js"></script>
+</head>
+
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    #stuGradesGridDiv{
+        position: relative;
+        height: 98%;
+        width: 99%;
+        left: 0.5%;
+        top: 1%;
+    }
+    #gbox_stuGradesGrid{
+        box-shadow: 0 0 10px 5px #f39095;
+    }
+</style>
+
+<body>
+<div id="stuGradesGridDiv">
+    <table id="stuGradesGrid"></table>
+    <div id="stuGradesPager"></div>
+</div>
+</body>
+</html>

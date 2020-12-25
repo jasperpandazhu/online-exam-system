@@ -1,0 +1,41 @@
+.card-container {
+    position: relative;
+}
+.sides {
+    position: relative;
+    /*“transform-style” property specifies how elements inside the “sides” div will be rendered*/
+    transform-style: preserve-3d;
+    transition: .6s;
+}
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*“backface-visibility” set to hidden to ensure that, when not facing the screen, all elements (sides) will be hidden. Without this, we would get a glitch on flip effect in the form of showing wrong side of the card.*/
+    backface-visibility: hidden;
+}
+.front {
+    cursor: pointer;
+    z-index: 2;
+    background-size: 100% 100%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
+}
+.back {
+    background-size: 100% 100%;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.sidesFlip {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);;
+}

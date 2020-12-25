@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grades Stats</title>
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/StudentGradeStats.js"></script>
+</head>
+
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    #bigDiv{
+        position: relative;
+        height: 98%;
+        width: 99%;
+        left: 0.5%;
+        top: 1%;
+        box-shadow: 0 0 10px 5px #f39095;
+    }
+</style>
+
+<body>
+<div id="bigDiv" class="p-3 overflow-auto">
+    <h4 class="text-center">Student Exam Statistics</h4>
+    <div class="d-flex justify-content-between my-4">
+        <div class="d-inline px-5 mx-5" style="width: 40%">
+            <h5 class="text-center">General Stats:</h5>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Count:</span>
+                <span id="count"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Mean:</span>
+                <span id="mean"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Std:</span>
+                <span id="std"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Max:</span>
+                <span id="max"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Min:</span>
+                <span id="min"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Passed:</span>
+                <span id="passed"></span>
+            </div>
+             <div class="w-100 d-flex justify-content-between">
+                <span>Failed:</span>
+                <span id="failed"></span>
+            </div>
+        </div>
+        <div class="d-inline px-5 mx-5" style="width: 40%">
+            <h5 class="text-center">Grade Range (%):</h5>
+            <div class="w-100 d-flex justify-content-between">
+                <span>90-100:</span>
+                <span id="range1"></span>
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+                <span>80-89:</span>
+                <span id="range2"></span>
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+                <span>70-79:</span>
+                <span id="range3"></span>
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+                <span>60-69:</span>
+                <span id="range4"></span>
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+                <span>50-59:</span>
+                <span id="range5"></span>
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+                <span><50:</span>
+                <span id="range6"></span>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+    <h4 class="text-center">Question Correct Rate</h4>
+    <div class="d-flex flex-wrap justify-content-between" id="qCorrectRate">
+    </div>
+</div>
+</body>
+</html>

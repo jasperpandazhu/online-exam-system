@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam in Progress</title>
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--local js files-->
+    <script src="js/Common.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!--timeTo-->
+    <script src="plugins/timeTo/jquery.time-to.js"></script>
+    <link rel="stylesheet" href="plugins/timeTo/timeTo.css">
+    <script src="js/Common.js"></script>
+    <script src="js/ExamInProgress.js"></script>
+</head>
+</head>
+<style>
+    body{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(227, 238, 240, 0.8));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(227, 238, 240, 0.8));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(227, 238, 240, 0.8));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(227, 238, 240, 0.8));
+    }
+    #bigDiv{
+        width: 100%;
+        height: 91%;
+    }
+    #qBtnDiv, #qTypeBtnDiv, #viewDiv, #navDiv, #answerTypeDiv, #answerBtnDiv{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .typeBtn {
+        width: 42px;
+        height: 42px;
+    }
+    .qNumBtn {
+        width: 45px;
+        height: 45px;
+    }
+    #questionBlock > p {
+        font-size: large;
+    }
+</style>
+
+<body class="vw-100 vh-100">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="StudentHome.html">
+        <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+        <strong class="ml-1">Home</strong>
+    </a>
+    <div class="collapse navbar-collapse">
+        <span id="examName" class="text-light text-center lead ml-5 w-50"></span>
+        <button class="btn btn-info btn-sm ml-5" onclick="toggleTime()">Time</button>
+        <span id="countdown" class="d-none ml-2"></span>
+        <span id="studentName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+        <form action="javascript:;" class="mt-auto">
+            <button class="btn btn-primary btn ml-auto" type="button" onclick="confirmSubmitExam()">Submit</button>
+        </form>
+    </div>
+</nav>
+<div id="bigDiv" class="d-flex container-fluid pt-2 pb-1 pl-2 pr-3">
+    <div id="questionsDiv" class="h-100 col-3 d-flex flex-column justify-content-center rounded px-0">
+        <div class="w-100 rounded px-2 pb-4" style="height: 85%;" id="qBtnDiv">
+            <h5 class="text-center mt-4" id="typeTitle">fjdsapfhp</h5>
+            <p id="score" class="text-right px-3"></p>
+            <div id="questions" class="w-100 overflow-auto"></div>
+        </div>
+        <div class="w-100 mt-1 rounded d-flex align-items-center" style="height: 14%;" id="qTypeBtnDiv">
+            <div id="qTypes" class="w-100 px-1 d-flex justify-content-around flex-no-wrap"></div>
+        </div>
+    </div>
+    <div id="displayDiv" class="h-100 col-7 rounded mx-1 px-0">
+        <div id="viewDiv" class="rounded px-3 d-flex flex-column" style="height: 85%;"></div>
+        <div id="navDiv" class="d-flex justify-content-around align-items-center mt-1 rounded" style="height: 14%;">
+            <button class="btn btn-warning ml-5 w-25" onclick="previousQuestion()">Previous</button>
+            <button class="btn btn-warning mr-5 w-25" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+    <div id="answerDiv" class="h-100 col-2 rounded px-0">
+        <form action="javascript:;" method="post" class="h-100 d-flex flex-column">
+            <div id="answerTypeDiv" style="height: 85%" class="rounded px-2">
+                <div class="form-group d-none" style="height: 90%;" id="MCA">
+                    <h5 class="mt-4 text-center">Choose the best answer:</h5>
+                    <div class="d-flex flex-column justify-content-center px-3" style="height: 77%">
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="A" name="choice" class="custom-control-input check" value="A">
+                            <label class="custom-control-label" for="A">A</label>
+                        </div>
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="B" name="choice" class="custom-control-input check" value="B">
+                            <label class="custom-control-label" for="B">B</label>
+                        </div>
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="C" name="choice" class="custom-control-input check" value="C">
+                            <label class="custom-control-label" for="C">C</label>
+                        </div>
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="D" name="choice" class="custom-control-input check" value="D">
+                            <label class="custom-control-label" for="D">D</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-none" style="height: 90%;" id="TFA">
+                    <h5 class="mt-4 text-center">Choose true or false:</h5>
+                    <div class="d-flex flex-column justify-content-center px-3" style="height: 77%">
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="true" name="answer" class="custom-control-input check" value="1">
+                            <label class="custom-control-label" for="true">True</label>
+                        </div>
+                        <div class="custom-control custom-radio my-3">
+                            <input type="radio" id="false" name="answer" class="custom-control-input check" value="0">
+                            <label class="custom-control-label" for="false">False</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-none" style="height: 90%;" id="MRA">
+                    <h5 class="mt-4 text-center">Choose all that apply:</h5>
+                    <div class="d-flex flex-column justify-content-center px-3" style="height: 77%">
+                        <div class="custom-control custom-checkbox my-3">
+                            <input type="checkbox" class="custom-control-input check" id="choiceA" name="choiceA">
+                            <label class="custom-control-label" for="choiceA">A</label>
+                        </div>
+                        <div class="custom-control custom-checkbox my-3">
+                            <input type="checkbox" class="custom-control-input check" id="choiceB" name="choiceB">
+                            <label class="custom-control-label" for="choiceB">B</label>
+                        </div>
+                        <div class="custom-control custom-checkbox my-3">
+                            <input type="checkbox" class="custom-control-input check" id="choiceC" name="choiceC">
+                            <label class="custom-control-label" for="choiceC">C</label>
+                        </div>
+                        <div class="custom-control custom-checkbox my-3">
+                            <input type="checkbox" class="custom-control-input check" id="choiceD" name="choiceD">
+                            <label class="custom-control-label" for="choiceD">D</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-none" style="height: 90%;" id="FBA">
+                    <h5 class="mt-4 text-center">One answer per blank:</h5>
+                    <div class="d-flex flex-column justify-content-center px-3" style="height: 77%">
+                        <label class="control-label" for="stuAnswer1">Answer 1:</label>
+                        <input class="form-control mb-2 text" id="stuAnswer1" type="text" name="stuAnswer1">
+                        <label class="control-label" for="stuAnswer2">Answer 2:</label>
+                        <input class="form-control mb-2 text" id="stuAnswer2" type="text" name="stuAnswer2">
+                        <label class="control-label" for="stuAnswer3">Answer 3:</label>
+                        <input class="form-control mb-2 text" id="stuAnswer3" type="text" name="stuAnswer3">
+                        <label class="control-label" for="stuAnswer4">Answer 4:</label>
+                        <input class="form-control mb-2 text" id="stuAnswer4" type="text" name="stuAnswer4">
+                    </div>
+                </div>
+                <div class="form-group d-none" style="height: 90%;" id="NA">
+                    <h5 class="mt-4 text-center">Please enter numbers only:</h5>
+                    <div class="d-flex flex-column justify-content-center px-3" style="height: 77%">
+                        <label class="control-label" for="stuNumber">Answer:</label>
+                        <input class="form-control text" id="stuNumber" type="text"  name="number">
+                    </div>
+                </div>
+            </div>
+            <div id="answerBtnDiv" style="height: 14%" class="mt-1 rounded px-2 d-flex align-items-center justify-content-center">
+                <button class="btn bg-secondary btn-lg mt-auto mb-3" id="answerBtn" onclick="answerQuestion()">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="confirmSubmit" title="Submit the exam?">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>You will not be able to change the exam once it has been submitted. Are you sure?</p>
+</div>
+</body>
+</html>

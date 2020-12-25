@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Question Pool</title>
+    <link rel="stylesheet" href="css/RaphaelIcons.css">
+    <!--Minty Theme-->
+    <link href="css/Bootstrap4-theme-minty.css" rel="stylesheet">
+    <!--jQuery, jqGrid, Popper, JS-->
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--jQuery-ui-->
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/MyQuestionPool.js"></script>
+</head>
+
+<style>
+    body{
+        background: -webkit-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -ms-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: -o-linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));
+        background: linear-gradient(rgba(120, 194, 173, 0.8), rgba(255, 255, 255, 0.8));;
+    }
+    #bigDiv{
+        width: 100%;
+        height: 91%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+</style>
+
+<body class="vh-100 vw-100">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="InstructorHome.html">
+        <span class="iconSpan2 position-relative d-flex justify-content-center align-items-center" data-iconfont="S"></span>
+        <strong class="ml-1">Exam Management</strong>
+    </a>
+    <div class="collapse navbar-collapse">
+        <span id="instructorName" class="iconSpan text-light lead ml-auto mr-3 d-flex justify-content-center align-items-center" data-iconfont="L"></span>
+        <form action="/managementLogout" class="mt-auto">
+            <button class="btn btn-primary btn-sm ml-auto" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<div id="bigDiv" class="position-relative d-flex pr-2 pt-3 pb-2">
+    <div class="d-flex justify-content-center align-items-center flex-column col-2" id="div1">
+        <form action="javascript:;" class="w-100">
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <select type="text" class="form-control" id="course">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="questionType">Question Type:</label>
+                <select type="text" class="form-control" id="questionType">
+                </select>
+            </div>
+        </form>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg" onclick="getMyQuestionPool()">View</button>
+    </div>
+
+    <div id="iframeDiv" class="col-10 embed-responsive rounded">
+        <iframe src="" frameborder="0" class="embed-responsive-item" name="iframe" id="iframe"></iframe>
+    </div>
+</div>
+</body>
+</html>
